@@ -1,0 +1,34 @@
+task1
+name='sara'
+print(name.replace('r','m'))
+
+task2
+primes=[]
+low=3
+high=9
+for i in range(low,high +1):
+    flag=0
+    if i<3:
+        continue
+    if i==3:
+        primes.append(3)
+        continue
+    for j in range(3, i):
+        if i% j==0:
+            flag=1
+            break
+    if flag==0:
+        primes.append(i)
+print(primes)        
+
+task3
+string='good morning'
+for i in range (0, len(string)):
+    count=1;
+    for j in range(i+1, len(string)):
+        if (string[i]==string[j] and string[i] !=' '):
+            count=count+1;
+            string=string[:j] +'0'+string[j+1:];
+    if (count>1 and string[i] !='0'):
+        print(string[i]," ", count);
+
